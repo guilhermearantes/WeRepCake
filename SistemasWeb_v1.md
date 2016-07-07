@@ -51,7 +51,7 @@ Pretendemos futuramente programar aplicativos mobile para Android e IOS que sinc
     * **Nome:** Inserir República
     * **Escopo:** WeRep
     * **Nível:** Objetivo de usuário administrador
-    * **Ator primário:** Morador com privilégio administrador
+    * **Ator primário:** Usuário administrador.
     * **Interessados:**
       1. _Fundador:_ Inserir uma nova república para ser gerenciada.
       2. _Usuários:_ Participar de uma nova forma de gerenciar área financeira e patrimonial de republicas.
@@ -76,27 +76,194 @@ Pretendemos futuramente programar aplicativos mobile para Android e IOS que sinc
       2. Serão utilizadas as linguagens HTML juntamente com CSS e Java Script para exibição da tela, PHP para comunicação com banco de dados e MySql para definição e manipulação do Banco de Dados.
  
 2. Caso de Uso
-    * **Nome:** 
-    * **Escopo:** 
-    * **Nível:** 
-    * **Ator primário:** M
+    * **Nome:** Remover uma república.
+    * **Escopo:** WeRep
+    * **Nível:** Objetivo do usuário administrador. 
+    * **Ator primário:** Usuário administrador.
     * **Interessados:**
-      1. _Fundador:_ 
+      1. _Fundador e Usuários:_ Deixar de participar do sistema.
     * **Pré condições:**
-      1. 
+      1. O grupo de pessoas deve estar de acordo com o representante principal.
+      2. O fundador deve estar logado no sistema.
+      3. O nome da república deve estar previamente inserido na base de dados.
+      4. O sistema deve verificar se a república existe na base de dados.
     * **Garantias de sucesso:** 
-      1. 
+      1. A república pode ser removida caso seu nome esteja na base de dados da WeRep e o
+fundador esteja logado no sistema.
     * **Cenário de sucesso principal:**
-      1.
+      1. A república se encontra na base de dados e o fundador
+está logado no sistema.
     * **Extensões:**
-      1. 
+      1. Durante um período de 30 dias é possível resgatar a república e trazê-la de
+volta à ativa, porém o fundador que deve realizar esta operação.
     * **Requisitos especiais:**
-      1.
+      1. O fundador deve estar logado e ele que deve remover a república.
     * **Frequência de ocorrência:**
-      1. 
+      1. Ocorrerá somente quando for solicitada a remoção de uma república.
     * **Variações de dados e tecnologia:**
-      1. 
+      1. A comparação dos nomes é feita através de uma comunicação com o banco de dados
+solicitando a existência do nome digitado.
       
+
+3. Caso de Uso
+    * **Nome:** Adicionar morador.
+    * **Escopo:** WeRep
+    * **Nível:** Objetivo do usuário administrador. 
+    * **Ator primário:** Usuário administrador.
+    * **Interessados:**
+      1. _Fundador:_ Inserir um novo morador em sua república.
+      2. _Morador:_ Participar de uma nova forma de gerenciar área financeira e patrimonial.
+    * **Pré condições:**
+      1. O morador não deve estar previamente registrado.
+      2. O morador deverá aceitar os termos de compromisso da república.
+    * **Garantias de sucesso:** 
+      1. O morador pode ser registrado caso ainda não possua a sua identidade na base de
+dados da república.
+    * **Cenário de sucesso principal:**
+      1. Não existir uma pessoa com identidade igual à do
+morador previamente registrado.
+    * **Extensões:**
+      1. Não há.
+    * **Requisitos especiais:**
+      1. Utilizar apenas letras e números.
+    * **Frequência de ocorrência:**
+      1. Ocorrerá somente quando for solicitada a inserção de um
+calouro na república.
+    * **Variações de dados e tecnologia:**
+      1. A comparação do campo identidade é feita através de uma comunicação com o banco de
+dados solicitando a existência de uma pessoa com a mesma identidade.
+      2. Serão utilizadas as linguagens HTML juntamente com CSS e Java Script para exibição
+da tela, PHP para comunicação com banco de dados e MySql para definição e
+manipulação do Banco de Dados.
+
+4. Caso de Uso
+    * **Nome:** Remover morador.
+    * **Escopo:** WeRep
+    * **Nível:** Objetivo do usuário administrador. 
+    * **Ator primário:** Usuário administrador.
+    * **Interessados:**
+      1. _Fundador:_ Remover um morador em sua república.
+      2. _Morador:_ Deixar de participar de uma nova forma de gerenciar área financeira e patrimonial.
+    * **Pré condições:**
+      1. O morador deve estar previamente registrado.
+    * **Garantias de sucesso:** 
+      1. O morador pode ser removido caso possua a sua identidade na base de dados da
+república.
+    * **Cenário de sucesso principal:**
+      1. Existir uma pessoa com identidade igual à do morador
+previamente registrada.
+    * **Extensões:**
+      1. Não há.
+    * **Requisitos especiais:**
+      1. O fundador deve estar logado e ele que deve remover o morador.
+    * **Frequência de ocorrência:**
+      1. Ocorrerá somente quando for solicitada a remoção de um
+morador da república.
+    * **Variações de dados e tecnologia:**
+      1. A comparação do campo identidade é feita através de uma comunicação com o banco de
+dados solicitando a existência de uma pessoa com a mesma identidade.
+
+
+
+5. Caso de Uso
+    * **Nome:** Inserir despesas 
+    * **Escopo:** WeRep
+    * **Nível:** Objetivo do usuário administrador. 
+    * **Ator primário:** Usuário administrador e Usuário normal.
+    * **Interessados:**
+      1. _Fundador:_ Inserir despesas para serem rateadas.
+      2. _Morador:_ Inserir despesas para serem rateadas.
+    * **Pré condições:**
+      1. A república deve estar previamente registrada e o morador logado no sistema.
+    * **Garantias de sucesso:** 
+      1. Todos os campos devem ser preenchidos.
+    * **Cenário de sucesso principal:**
+      1. Campos preenchidos.
+    * **Extensões:**
+      1. Caso o fundador queira alterar os dados basta digitar novamente o campo em
+questão que substituirá o antigo dado. Não haverá funcionalidade de remoção destes
+dados, pois eles podem ser alterados para nulo.
+    * **Requisitos especiais:**
+      1. O fundador deve estar logado e ele que deve inserir os dados.
+    * **Frequência de ocorrência:**
+      1. Ocorrerá somente quando for solicitada a remoção de um
+morador da república.
+    * **Variações de dados e tecnologia:**
+      1. A inserção de dados será feita através de uma comunicação com o banco de dados.
+
+
+6. Caso de Uso
+    * **Nome:** Inserir patrimônio
+    * **Escopo:** WeRep
+    * **Nível:** Objetivo do usuário administrador. 
+    * **Ator primário:** Usuário administrador.
+    * **Interessados:**
+      1. _Fundador:_ Adicionar um patrimônio com data de substituição e valor a ser cobrado
+mensalmente para cobrir tal custo final.
+    * **Pré condições:**
+      1. A república deve estar previamente registrada e o fundador logado no sistema.
+    * **Garantias de sucesso:** 
+      1. O patrimônio foi adicionado a base de dados da república.
+    * **Cenário de sucesso principal:**
+      1. O patrimônio foi adicionado a base de dados.
+    * **Extensões:**
+      1. Não há.
+    * **Requisitos especiais:**
+      1. O fundador deve estar logado e ele que deve inserir os dados.
+    * **Frequência de ocorrência:**
+      1. Ocorrerá somente quando for solicitada a inserção de um
+novo patrimônio.
+    * **Variações de dados e tecnologia:**
+      1. A inserção de dados será feita através de uma comunicação com o banco de dados.
+
+
+7. Caso de Uso
+    * **Nome:** Remover patrimônio.
+    * **Escopo:** WeRep
+    * **Nível:** Objetivo do usuário administrador. 
+    * **Ator primário:** Usuário administrador.
+    * **Interessados:**
+      1. _Fundador:_ Remover um patrimônio (Em caso de venda ou descarte).
+    * **Pré condições:**
+      1. A república deve estar previamente registrada, o fundador logado no sistema e o
+patrimônio previamente inserido.
+    * **Garantias de sucesso:** 
+      1. O patrimônio foi removido da base de dados da república.
+    * **Cenário de sucesso principal:**
+      1. O patrimônio foi removido da base de dados.
+    * **Extensões:**
+      1. Ao ser removido é adicionado em um histórico o valor acumulado com tal
+patrimônio.
+    * **Requisitos especiais:**
+      1. O fundador deve estar logado e ele que deve inserir os dados.
+    * **Frequência de ocorrência:**
+      1. Ocorrerá somente quando for solicitada a remoção de um novo patrimônio.
+    * **Variações de dados e tecnologia:**
+      1. A remoção de dados será feita através de uma comunicação com o banco de dados.
+
+
+8. Caso de Uso
+    * **Nome:** Rateio das Despesas
+    * **Escopo:** WeRep
+    * **Nível:** Sistema
+    * **Ator primário:** Sistema
+    * **Interessados:**
+      1. _Todos:_ Gerar os valores do rateio das despesas corretamente.
+    * **Pré condições:**
+      1. Ter sido lançado ao menos 1 despesa.
+    * **Garantias de sucesso:** 
+      1. Gerar os valores corretos.
+    * **Cenário de sucesso principal:**
+      1. Todos os moradores tiverem os valores corretamente mostrados.
+    * **Extensões:**
+      1. É possível desfazer as ações.
+    * **Requisitos especiais:**
+      1. Não há.
+    * **Frequência de ocorrência:**
+      1. O fechamento correrá em uma data fixa pré estipulada pelo usuário admin.
+    * **Variações de dados e tecnologia:**
+      1. Não há.
+
 ## 7. Diagramas
 
 Foram desenvolvidos alguns diagramas para auxiliar na construção do protótipo, conforme pode ser visto a seguir:
@@ -124,13 +291,11 @@ Os protótipos das telas principais do projeto juntamente com o código fonte es
  
  ![Imagem consultar vendas](https://github.com/brunopego/)
  
-
-
 ## 11. Cronograma
 
-![Cronograma](https://github.com/)
+![Cronograma](https://github.com/guilhermearantes/imagens/cronograma_werep.jpg)
 
-![Grant Chart](https://github.com/)
+![Grant Chart](https://github.com/guilhermearantes/imagens/gant_werep.jpg)
 
 ## 12. Commits
 
