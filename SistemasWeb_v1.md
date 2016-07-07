@@ -293,9 +293,8 @@ Os protótipos das telas principais do projeto juntamente com o código fonte es
  
 ## 11. Cronograma
 
-![Cronograma](https://github.com/guilhermearantes/imagens/cronograma_werep.jpg)
-
-![Grant Chart](https://github.com/guilhermearantes/imagens/gant_werep.jpg)
+![Cronograma](https://github.com/guilhermearantes/WeRepCake/blob/master/imagens/cronograma_werep.jpg)
+![Grant Chart](https://github.com/guilhermearantes/WeRepCake/blob/master/imagens/gant_werep.jpg)
 
 ## 12. Commits
 
