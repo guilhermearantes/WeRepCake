@@ -281,7 +281,7 @@ Na classe venda, existe um método denominado Incluir, que não retorna nenhuma 
 ![Imagem Diagrama de Classes - Ferramenta Astah](https://github.com/)
 
 ## 9. Banco de Dados
-![Imagem Diagrama ER - Ferramenta MySql](https://github.com/guilhermearantes/WeRepCake/blob/master/imagens/werepbd.jpg)
+![Imagem Diagrama ER - Ferramenta MySql](https://github.com/guilhermearantes/WeRepCake/blob/master/imagens/werepbd.png)
 
 ## 10. Protótipos
 
