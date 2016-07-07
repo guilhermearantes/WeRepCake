@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Jul-2016 às 16:58
+-- Generation Time: 07-Jul-2016 às 22:45
 -- Versão do servidor: 5.7.9
 -- PHP Version: 5.6.16
 
@@ -64,6 +64,8 @@ CREATE TABLE IF NOT EXISTS `inquilinos` (
   `naturalidade` varchar(50) NOT NULL,
   `sexo` varchar(30) NOT NULL,
   `moradia_id` int(11) NOT NULL,
+  `login` varchar(45) NOT NULL,
+  `senha` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `moradia_id` (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -72,8 +74,8 @@ CREATE TABLE IF NOT EXISTS `inquilinos` (
 -- Extraindo dados da tabela `inquilinos`
 --
 
-INSERT INTO `inquilinos` (`id`, `nome`, `apelido`, `celular`, `email`, `data_nascimento`, `naturalidade`, `sexo`, `moradia_id`) VALUES
-(1, 'Guilherme Jannotti Arantes', 'Jannottin', 999826018, 'guilherme.jannotti@gmail.com', '1992-10-10', 'Belo Horizonte/MG', 'Masculino', 0);
+INSERT INTO `inquilinos` (`id`, `nome`, `apelido`, `celular`, `email`, `data_nascimento`, `naturalidade`, `sexo`, `moradia_id`, `login`, `senha`) VALUES
+(1, 'Guilherme Jannotti Arantes', 'Jannottin', 999826018, 'guilherme.jannotti@gmail.com', '1992-12-17', 'Belo Horizonte', 'Masculino', 1, 'jannotti@gmail.com', 'jannotti');
 
 -- --------------------------------------------------------
 
