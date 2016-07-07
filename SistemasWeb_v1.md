@@ -46,6 +46,7 @@ Porém, devido algumas análises prévias, chegamos à conclusão que a melhor l
 Pretendemos futuramente programar aplicativos mobile para Android e IOS que sincronizem com o sistema Web, de tal maneira que o usuário possa utilizar o sistema tanto pelo seu smartphone quanto pela web.
 
 ## 6. Casos de uso
+
   1. Caso de Uso
     * **Nome:** Inserir República
     * **Escopo:** WeRep
@@ -74,7 +75,28 @@ Pretendemos futuramente programar aplicativos mobile para Android e IOS que sinc
       1. A comparação dos nomes é feita através de uma comunicação com o banco de dados solicitando a existência do nome digitado na hora da criação.
       2. Serão utilizadas as linguagens HTML juntamente com CSS e Java Script para exibição da tela, PHP para comunicação com banco de dados e MySql para definição e manipulação do Banco de Dados.
  
-
+2. Caso de Uso
+    * **Nome:** 
+    * **Escopo:** 
+    * **Nível:** 
+    * **Ator primário:** M
+    * **Interessados:**
+      1. _Fundador:_ 
+    * **Pré condições:**
+      1. 
+    * **Garantias de sucesso:** 
+      1. 
+    * **Cenário de sucesso principal:**
+      1.
+    * **Extensões:**
+      1. 
+    * **Requisitos especiais:**
+      1.
+    * **Frequência de ocorrência:**
+      1. 
+    * **Variações de dados e tecnologia:**
+      1. 
+      
 ## 7. Diagramas
 
 Foram desenvolvidos alguns diagramas para auxiliar na construção do protótipo, conforme pode ser visto a seguir:
