@@ -269,7 +269,7 @@ patrimônio.
 Foram desenvolvidos alguns diagramas para auxiliar na construção do protótipo, conforme pode ser visto a seguir:
 
 * Diagrama de Casos de Usos:
-	![Diagrama de Casos de Usos](https://github.com/)
+	![Diagrama de Casos de Usos](https://github.com/guilhermearantes/WeRepCake/blob/master/imagens/diagrama.jpg)
 
 
 
@@ -281,15 +281,12 @@ Na classe venda, existe um método denominado Incluir, que não retorna nenhuma 
 ![Imagem Diagrama de Classes - Ferramenta Astah](https://github.com/)
 
 ## 9. Banco de Dados
-![Imagem Diagrama ER - Ferramenta MySql](https://github.com/)
+![Imagem Diagrama ER - Ferramenta MySql](https://github.com/guilhermearantes/WeRepCake/blob/master/imagens/werepbd.jpg)
 
 ## 10. Protótipos
 
 Os protótipos das telas principais do projeto juntamente com o código fonte estão definidos abaixo:
  
-### Consultar Vendas:
- 
- ![Imagem consultar vendas](https://github.com/brunopego/)
  
 ## 11. Cronograma
 
