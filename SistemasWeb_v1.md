@@ -293,13 +293,6 @@ Os protótipos das telas principais do projeto juntamente com o código fonte es
 ![Cronograma](https://github.com/guilhermearantes/WeRepCake/blob/master/imagens/cronograma_werep.jpg)
 ![Grant Chart](https://github.com/guilhermearantes/WeRepCake/blob/master/imagens/gant_werep.jpg)
 
-## 12. Commits
-
-Nesta seção está descrito os principais *Commits* no desenvolvimento da parte inicial do projeto, também está incluso o autor do *commit*, porém o trabalho foi desenvolvido em conjunto e reuniões o que não implica que o nome do autor do *commit* está diretamente relacionado com a total autoria da atividade.
-
-1. commit f17b6fd (@guilhermearantes) -> Neste *commit* deu-se início ao inicio do projeto.
-
-
 ## 13. Referências
 
 
