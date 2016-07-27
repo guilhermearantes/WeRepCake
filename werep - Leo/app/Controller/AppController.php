@@ -31,4 +31,20 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+
+    public function afterFilter(){
+            if($this->action == 'index_inquilino' && $this->action == 'index_in' && $this->action == 'view_in' && $this->action == 'add' && $this->action == 'edit' && $this->action == 'del'){
+                $this->autenticar();
+            }
+    }
+
+    public function autenticar(){
+        if(! $this->Session->check('Inquilino')){
+            $this->redirect(array('controller'=>'inquilinos','action'=>'index_login'));
+            exit();
+        }else {
+            $paciente = $this->Session->read('Inquilino');
+            $this->Flash->set('Inquilino: ' . $paciente['0']['Inquilino']['login']);
+        }
+    }
 }

@@ -5,25 +5,46 @@ class LancamentosController extends AppController {
     public $helpers = array('Html', 'Form');
     public $components = array('Flash');
 
-    public function index() {
-        $this->set('lancamentos', $this->Lancamento->find('all'));
-        //Debugger::dump($this->Lancamento->find('all'));
+    public function index_in() {
+        $sessao = $this->Session->read('Inquilino');
+        $moradiaID = $sessao['0']['Moradia']['id'];
+        $lancamentosInquilinos = $this->Lancamento->Inquilino->query("SELECT *
+                    FROM lancamentos, inquilinos
+                    WHERE lancamentos.moradia_id = $moradiaID
+                    AND inquilinos.moradia_id = $moradiaID
+                    AND lancamentos.inquilino_id = inquilinos.id
+                    GROUP BY lancamentos.id
+                    ;");
+        $this->set('lancamentosInquilinos',$lancamentosInquilinos);
+        #Debugger::dump($lancamentosInquilinos);
     }
 
-    public function view($codigo) {
-        $lancamento = $this->Lancamento->findById($codigo);
-        $this->set('lancamento', $lancamento);
+    public function index_inquilino() {
+        $sessao = $this->Session->read('Inquilino');
+        $inquilinoID = $sessao['0']['Inquilino']['id'];
+        $busca = $this->Lancamento->query("SELECT *
+                    FROM lancamentos
+                    WHERE lancamentos.inquilino_id = $inquilinoID
+                    GROUP BY lancamentos.id
+                    ;");
+        $this->set('lancamentosInquilino',$busca);
+    }
+
+    public function view_in($codigo) {
+        $sessao = $this->Session->read('Inquilino');
+        $busca = $this->Lancamento->query("SELECT *
+                    FROM lancamentos,inquilinos
+                    WHERE lancamentos.id = $codigo
+                    GROUP BY lancamentos.id
+                    ;");
+        $this->set('lancamentoInquilino',$busca['0']);
+        #Debugger::dump($busca);
     }
 
     public function add(){
-        //Debugger::dump($this);
         if(empty($this->request->data)){
             //Data vazia  => campos para inserção
             //carregar os dados para exibição
-            //$paciente = $this->Session->read('Paciente');
-            //$pacientes = $this->Exame->Paciente->find('first', array(
-            //    'conditions' => array('Paciente.id' => $paciente['0']['Paciente']['id'])));
-
             $inquilinos = $this->Lancamento->Inquilino->find('list', array('fields' => array('id', 'nome')));
             $contas = $this->Lancamento->Conta->find('list', array('fields' => array('id', 'nome')));
 
@@ -31,11 +52,13 @@ class LancamentosController extends AppController {
             $this->set('inquilinos', $inquilinos);
             $this->set('contas', $contas);
         } else{
-            #$paciente = $this->Session->read('Paciente');
-            #$this->request->data ['Exame']['paciente_id'] = $paciente['0']['Paciente']['id'];
+            $sessao = $this->Session->read('Inquilino');
+            $this->request->data ['Lancamento']['inquilino_id'] = $sessao['0']['Inquilino']['id'];
+            $this->request->data ['Lancamento']['moradia_id'] = $sessao['0']['Moradia']['id'];
+
             if($this->Lancamento->Save($this->request->data)){
                 $this->Flash->set('Lancamento feito com sucesso!');
-                $this->redirect(array('action' => 'index'));
+                $this->redirect(array('action' => 'index_in'));
             }
         }
     }
@@ -55,12 +78,14 @@ class LancamentosController extends AppController {
             //Recuperar os dados atuais
             $this->request->data = $this->Lancamento->findById($codigo);
         } else{
-            //$paciente = $this->Session->read('Paciente');
-            //$this->request->data ['Exame']['paciente_id'] = $paciente['0']['Paciente']['id'];
+            $sessao = $this->Session->read('Inquilino');
+            $this->request->data ['Lancamento']['inquilino_id'] = $sessao['0']['Inquilino']['id'];
+            $this->request->data ['Lancamento']['moradia_id'] = $sessao['0']['Moradia']['id'];
+
             if($this->Lancamento->Save($this->request->data)){
                 $this->Lancamento->delete($codigo);
                 $this->Flash->set('Lançamento editado com sucesso!');
-                $this->redirect(array('action' => 'index'));
+                $this->redirect(array('action' => 'index_in'));
             }
         }
     }
@@ -68,7 +93,7 @@ class LancamentosController extends AppController {
     public function del($codigo){
         $this->Lancamento->delete($codigo);
         $this->Flash->set('Lançamento excluído com Sucesso!');
-        $this->redirect(array('action' => 'index'));
+        $this->redirect(array('action' => 'index_in'));
     }
 }
 ?>
