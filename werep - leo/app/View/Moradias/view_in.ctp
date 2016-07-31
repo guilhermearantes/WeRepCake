@@ -13,6 +13,7 @@
 		<nav id="menu">
 	        <h1>Menu Principal</h1>
 	        <ul type="disc">
+				<?php echo $this->Html->image('WR-Logo.png'); ?>
 	            <li><?php echo $this->Html->link("Inquilinos",
                           array('controller' => 'inquilinos', 'action' => 'index_in')); ?></li>
 	            <li><?php echo $this->Html->link("Meus Lancamentos",

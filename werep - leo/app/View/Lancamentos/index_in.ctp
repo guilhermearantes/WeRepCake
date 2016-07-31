@@ -13,6 +13,7 @@
 		<nav id="menu">
 	        <h1>Menu Principal</h1>
 	        <ul type="disc">
+				<?php echo $this->Html->image('WR-Logo.png'); ?>
 	            <li><?php echo $this->Html->link("Inquilinos",
                           array('controller' => 'inquilinos', 'action' => 'index_in')); ?></li>
 	            <li><?php echo $this->Html->link("Meus Lancamentos",
@@ -33,7 +34,7 @@
         <button style="actions"> <?php
                 echo $this->Html->link("Menu",array('controller' => 'menu', 'action' => 'index_in'));
         ?></button>
-        <table>
+        <table class="table table-striped table-hover">
             <tr>
                 <th>Código</th>
                 <th>Nome Lançamento</th>
@@ -72,7 +73,7 @@
                 </tr>
             <?php endforeach; ?>
         </table>
-        
+
 	</interface>
 </body>
 </html>

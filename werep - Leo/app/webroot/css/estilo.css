@@ -13,6 +13,7 @@ body{
     margin-right: -10px;
     padding: 10px 10px 10px 10px;
     text-align: center;
+    background: url("../img/backgroundLogin.jpg") center 0px;
 }
 
 div#interface{
@@ -22,14 +23,13 @@ div#interface{
     margin-left: -10px;
     margin-right: -10px;
     padding: 70px 10px 10px 10px;
+    background: url("../img/backgroundLogin.jpg") center 0px;
 }
 
 div#login{
-    width: auto;
-    background: white;
-    margin-top: -70px;
+    #width: 100%;
     padding: 70px 10px 200px 10px;
-    background: url("../img/login.jpg") center 0px;
+    background: url("../img/backgroundLogin.jpg") center 0px;
 }
 
 p{

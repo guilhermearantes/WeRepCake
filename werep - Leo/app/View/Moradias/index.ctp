@@ -13,6 +13,7 @@
         <nav id="menu">
 	        <h1>Menu Principal</h1>
 	        <ul type="disc">
+				<?php echo $this->Html->image('WR-Logo.png'); ?>
 	            <li><?php echo $this->Html->link("Login",
                           array('controller' => 'inquilinos', 'action' => 'index_login'));?></li>
 	            <li><?php echo $this->Html->link("Se cadastrar em uma Moradia já existente",
@@ -25,7 +26,7 @@
 		</nav>
 
         <h1>Relação de Moradias</h1>
-        <table>
+        <table class="table table-striped table-hover">
           <tr>
             <th>Nome</th>
             <th>Cidade</th>
