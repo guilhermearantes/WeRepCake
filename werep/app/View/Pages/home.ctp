@@ -7,7 +7,7 @@
 
 <span class="notice success">
     <?php
-        echo $this->Html->link("Se cadastrar em uma Moradia já existente",
+        echo $this->Html->link("Se cadastrar em uma Moradia ",
         array('controller' => 'inquilinos', 'action' => 'add_novo'));
      ?>
 </span>

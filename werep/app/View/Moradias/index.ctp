@@ -16,12 +16,9 @@
 				<?php echo $this->Html->image('WR-Logo.png'); ?>
 	            <li><?php echo $this->Html->link("Login",
                           array('controller' => 'inquilinos', 'action' => 'index_login'));?></li>
-	            <li><?php echo $this->Html->link("Se cadastrar em uma Moradia já existente",
+	            <li><?php echo $this->Html->link("Se cadastrar em uma Moradia ",
                           array('controller' => 'inquilinos', 'action' => 'add_novo'));?></li>
-	            <li><?php echo $this->Html->link("Inserir uma nova Moradia para ser administrada",
-                          array('controller' => 'inquilinos', 'action' => 'index_login'));?></li>
-	            <li><?php echo $this->Html->link("Moradias existentes",
-                          array('controller' => 'moradias', 'action' => 'index'));?></li>
+	            
 	        </ul>
 		</nav>
 
@@ -33,9 +30,9 @@
             <th>Estado</th>
             <th>Bairro</th>
             <th>Rua</th>
-            <th>Numero</th>
+            <th>Número</th>
             <th>Telefone</th>
-            <th>Data de Fundacao</th>
+          
           </tr>
 
           <?php foreach ($moradias as $m): ?>
@@ -63,13 +60,17 @@
               <td>
                 <?php echo $m['Moradia']['telefone']; ?>
               </td>
-              <td>
-                <?php echo $m['Moradia']['data_fundacao']; ?>
-              </td>
+              
             </tr>
           <?php endforeach; ?>
         </table>
-
+        <div id="button">
+            
+            <button>
+            <?php echo $this->Html->link('Voltar', array('controller' => 'menu', 'action'=> 'index'));?>
+            </button>
+            
+         </div>
 
 	</interface>
 </body>

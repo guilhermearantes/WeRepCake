@@ -27,7 +27,7 @@
 	        </ul>
 		</nav>
 
-        <h1>Inserir Dados sobre o nova Moradia</h1>
+        <h2>Inserir Dados sobre o nova Moradia</h2>
         <?php echo $this->Form->create('Moradia');?>
         <table>
         <p><?php echo $this->Form->input('nome');  ?></p>

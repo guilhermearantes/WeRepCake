@@ -1,0 +1,642 @@
+// 
+// VARIABLES 
+//
+@main-color:        #D869C0;    // page important color
+@background:        #fff;        // section background color
+@background-2:      #F3F4EF;
+@dark_title_txt:    #000;
+@light_title_txt:   #fff;
+@footer-bg:         #18181C;
+
+
+// Less Function
+// INPUT FORM PLACEHOLDER COLOR   
+.placeholder-color( @value ) {
+    &::-webkit-input-placeholder {
+        color: @value !important;
+    }
+    &:-moz-placeholder {
+        color: @value !important;
+    }
+    &::-moz-placeholder {
+        color: @value !important;
+    }
+    &:-ms-input-placeholder {
+        color: @value !important;
+    }
+}
+
+/**
+ * ===============================
+ *  Defult CSS 
+ * ===============================
+ */
+p{
+    color: fade(@dark_title_txt, 90%);
+}
+
+
+
+/**
+ * ===============================
+ *  Section Heading Section Defult Style 
+ * ===============================
+ */
+.section-heading {
+    color: fade(@dark_title_txt, 90%);
+
+    &:after {
+        background: url('../../../images/shape-purple.png');
+    }
+}
+.section-header {
+    .section-heading-normal {
+        color: fade(@dark_title_txt, 90%);
+    }
+
+    p {
+        color: fade(@dark_title_txt, 90%);
+    }
+}
+
+
+
+/**
+ * ===============================
+ *   Defult Button Style
+ * ===============================
+ */
+.btn {
+
+    &.btn-fill {
+        background-color: @main-color;
+        border-color: @main-color;
+
+        &:hover {
+            background-color: darken(@main-color, 15%) !important;
+            border-color: darken(@main-color, 15%) !important;
+        }
+    }
+
+    &.btn-border {
+        border-color: @main-color;
+
+        &:hover {
+            background-color: @main-color;
+        }
+    }
+}
+
+
+.btn-text-link {
+    a {
+        color: @main-color;
+
+        &:hover {
+            color: darken(@main-color, 15%) !important;
+        }
+    }
+}
+
+
+
+/**
+ * =============================
+ * Form Defult Style
+ * =============================
+ */
+.single-form {
+    .input-group {
+        .btn {
+            &:hover {
+                background-color: darken(@main-color, 15%) !important;
+            }
+        }
+    }
+}
+
+.outer-border {
+    &.single-form {
+        .input-group {
+            .btn {
+                background-color: @main-color;
+            }
+        }
+    }
+}
+
+
+/**
+ * ================================
+ * Navbar Style 
+ * ================================
+ */
+.header-nav { 
+
+    /* After Fixed In Top */
+    &.navbar-home { 
+        .nav {
+            li {
+                .btn {
+                    background-color: @main-color;
+
+                    &:hover {
+                        background-color: darken(@main-color, 15%) !important;
+                        border-color: darken(@main-color, 15%) !important;
+                    }
+                }
+            }
+        }
+    }  
+}
+
+
+
+/**
+ * ================================
+ * Header Contant Style
+ * ================================
+ */
+
+
+/*  Header Contant Style  */
+/*  ====================  */
+.header-body {
+    .header-contant-left {
+        .single-form {
+            .input-group {
+                .form-control {
+                    .placeholder-color(fade(@main-color, 80%));
+                    color: @main-color;
+
+                    &:hover {
+                        color: @main-color !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/**
+ * =========================
+ * Sponsors Section
+ * =========================
+ */
+.sponsors {
+    background-color: @background-2;
+}
+
+
+
+/**
+ * ==========================
+ * Features Defult Style
+ * ==========================
+ */
+
+
+/* Features Defult Style */
+.features {
+    .each-item {
+        .fa {
+            color: @main-color;
+        }
+    }
+}
+.features-hover {
+    .each-item {
+        &:hover {
+            .fa {
+                background-color: @main-color;
+            }
+        }
+    }
+
+}
+
+
+
+/**
+ * =============================
+ * EASY FEATURES AVAILABLE 
+ * =============================
+ */
+.easy-features-available {
+    background: @background;
+}
+
+
+
+/**
+ * ==============================
+ * Get Our App Section
+ * ==============================
+ */
+.get-our-app-bg {
+    background-color: @background;
+}
+
+.get-our-app {
+    .single-form {
+        .btn {
+            background-color: @main-color;
+        }
+    }
+}
+
+
+
+
+/**
+ * ========================================
+ * description Info Inner
+ * ========================================
+ */
+
+.description-info-inner {
+    ul {
+        li {
+            color: fade(@dark_title_txt, 90%);
+
+            &:after {
+                background-color: @main-color;
+            }
+        }
+    }
+}
+.description-info-inner-2 {
+    ul {
+        li {
+            color: fade(@dark_title_txt, 90%);
+
+            &:before {
+                color: @main-color;
+            }
+
+            &:hover {
+                &:before {
+                    background-color: @main-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+/**
+ * ======================
+ * Pricing Table Section 
+ * ======================
+ */
+.pricing-table {
+    background-color: @background-2;
+}
+
+.table-single {
+    border-color: fade(@dark_title_txt, 12%);
+
+    .important {
+        background-color: @main-color;
+
+        &:after {
+            border-top: 38px solid @main-color;
+        }
+    }
+
+    .meta-price {
+        color: @dark_title_txt;
+
+        .rate {
+
+            &:after {
+                border-color: fade(@dark_title_txt, 12%);
+            }
+        }
+    }
+    .button {
+        .btn {
+            border-color: fade(@dark_title_txt, 12%);
+            color: @dark_title_txt;
+        }
+    }
+
+    &:hover {
+        .meta-price {
+            .rate {
+                background-color: @main-color;
+            }
+        }
+
+        .button {
+            .btn {
+                border-color: @main-color;
+                background-color: @main-color;
+            }
+        }
+    }
+}
+
+
+
+/**
+ * ====================================
+ * Newsletter Form Style
+ * ====================================
+ */
+.subscribe-newsletter {
+    background-color: @main-color; 
+    
+    .input-group {
+        .form-control,
+        .btn {
+            &:hover {
+                color: @main-color;
+            }
+        }
+
+        .btn {
+            &:hover {
+                background-color: darken(#2F3034, 10%) !important;
+            }
+        }
+    }
+}
+
+
+
+
+/**
+ * ===============================
+ * Subscription and contact  "MESSAGE"
+ * ===============================
+ */
+.subscription-success, 
+.subscription-failed {
+    color: fade(@dark_title_txt, 80%) !important;
+}
+
+
+
+
+/**
+ * ======================
+ * Team Section
+ * ======================
+ */
+.team {
+    background-color: @background;
+
+    .team-contant {
+        .each-member {
+            .member-detail {
+                .name {
+                    color: fade(@dark_title_txt, 90%);
+                }
+                .detail {
+                    color: fade(@dark_title_txt, 80%);
+                }
+            }
+        }
+    }
+}
+
+
+
+/**
+ * =========================================
+ * Image Gallery Section
+ * =========================================
+ */
+
+ .image-gallery {
+    background-color: @background;
+
+    #slider {
+        .owl-page {
+            span {
+                border: 1px solid @main-color !important;
+            }
+            &.active {
+                span {
+                    background-color: @main-color !important;
+                }
+            }
+        }
+    }
+ }
+
+
+/**
+ * =========================================
+ * Download Section
+ * =========================================
+ */
+.download {
+    background-color: @background;
+
+    .button-group {
+        .btn {
+            background-color: @main-color;
+        }
+    }
+}
+
+
+
+
+/**
+ * ===========================
+ * Footer Section 
+ * ===========================
+ */
+.footer {
+    background-color: @footer-bg;
+
+    .copyright {
+        p {
+            color: fade(@light_title_txt, 90%);
+
+            a {
+                color: @main-color;
+
+                &:hover {
+                    color: darken(@main-color, 15%) !important;
+                }
+            }
+        }
+    }
+}
+
+.social-icon {
+    ul {
+        li {
+            a {
+                color: @footer-bg;
+            }
+        }
+    }
+}
+
+
+
+/**
+ * ================================
+ * Some Features Section
+ * ================================
+ */
+.some-feature-background {
+    background-color: @background;
+}
+
+.some-feature {
+    .section-header {
+        .section-heading {
+            color: fade(@light_title_txt, 90%);
+        }
+
+        p {
+            color: fade(@light_title_txt, 90%);
+        }
+    }
+
+    .features {
+        .detail {
+            h4 {
+                color: @main-color;
+            }
+
+            p {
+                color: fade(@light_title_txt, 90%);
+            }
+        }
+    }
+}
+
+
+
+/**
+ * =============================
+ * Client's Feedback Section
+ * =============================
+ */
+.client-feedback {
+    background-color: @background;
+}
+
+.client-feedback-contant{
+    .each-item {
+        figure{
+            border-color: fade(@dark_title_txt, 12%);
+        }
+
+        .quote-sym {
+            .fa {
+                color: fade(@dark_title_txt, 15%);
+            }
+        }
+
+        blockquote {
+            color: fade(@dark_title_txt, 90%);
+        }
+
+        .rating {
+            li {
+                .fa {
+                    color: @main-color;
+                }
+            }
+        }
+            
+        figcaption {
+            img {
+                border-color: fade(@dark_title_txt, 12%);
+            }
+            .name {
+                color:  fade(@dark_title_txt, 80%)
+            }
+            cite {
+                color: @main-color;
+            }
+        }
+    }
+}
+
+
+
+/**
+ * =========================
+ * Free Trial Section
+ * =========================
+ */
+ .free-trial-bg {
+    background-color: @background;
+ }
+
+.free-trial {
+
+    .section-header {
+        .section-heading {
+            color: fade(@light_title_txt, 90%);
+        }
+
+        p {
+            color: fade(@light_title_txt, 90%);
+        }
+    }
+}
+
+
+
+/**
+ * =========================
+ * Contact Us
+ * =========================
+ */
+.contact-us {
+    background-color: @background-2;
+
+    .contact-us-body {
+        .btn {
+            color: @main-color;
+        }
+    }
+}
+
+
+
+/**
+ * =========================================
+ * Collapse CSS
+ * =========================================
+ */
+
+.collapse-area {
+    background-color: @background;
+}
+
+
+
+
+@import "../../../bootstrap/less/variables.less"; 
+
+@media (max-width: @screen-xs-max) {
+    /**
+     * ================================
+     * Navbar Style 
+     * ================================
+     */
+    .header-nav {
+        .navbar-collapse {
+            &.in {
+                border-top-color: fade(@main-color, 90%);
+            }
+        }
+    }
+
+
+}
+
+
