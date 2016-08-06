@@ -273,23 +273,16 @@ Foram desenvolvidos alguns diagramas para auxiliar na construção do protótipo
 
 
 
-## 8. Classes
-
-Algumas explicações sobre o diagrama:
-Na classe venda, existe um método denominado Incluir, que não retorna nenhuma informação, ou seja, retorna void. Essa mesma explicação serve para as demais classes. Podemos perceber ainda o relacionamento todo-parte na forma de composição na relação entre as classes Venda e Itens e o relacionamento de agregação na relação Itens e Produto.
-
-![Imagem Diagrama de Classes - Ferramenta Astah](https://github.com/)
-
-## 9. Banco de Dados
+## 8. Banco de Dados
 ![Imagem Diagrama ER - Ferramenta MySql](https://github.com/guilhermearantes/WeRepCake/blob/master/imagens/bd_werep.png)
 
 
-## 10. Cronograma
+## 9. Cronograma
 
 ![Cronograma](https://github.com/guilhermearantes/WeRepCake/blob/master/imagens/cronograma_werep.jpg)
 ![Grant Chart](https://github.com/guilhermearantes/WeRepCake/blob/master/imagens/gant_werep.jpg)
 
-## 11. Referências
+## 10. Referências
 
 CookBook - PHP
 Devmedia
