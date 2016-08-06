@@ -284,7 +284,9 @@ Foram desenvolvidos alguns diagramas para auxiliar na construção do protótipo
 
 ## 10. Referências
 
-CookBook - PHP
+CookBook-CakePHP
+
 Devmedia
+
 StackOverflow
 
