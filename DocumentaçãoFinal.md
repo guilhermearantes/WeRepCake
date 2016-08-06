@@ -1,4 +1,4 @@
-# Documento de Análise de Requisitos
+# Documento Final do Trabalho Prático de Sistemas Web
 
 ## 1. Introdução
 Dada a necessidade de desenvolvermos um projeto para a disciplina de Sistemas Web I, identificamos a necessidade de um problema de gerenciar repúblicas e moradias comunitárias, a idéia inicial do projeto é contemplar toda a parte financeira, patrimoninal e contro de tarefas.
@@ -283,17 +283,13 @@ Na classe venda, existe um método denominado Incluir, que não retorna nenhuma 
 ## 9. Banco de Dados
 ![Imagem Diagrama ER - Ferramenta MySql](https://github.com/guilhermearantes/WeRepCake/blob/master/imagens/bdwerep.jpg)
 
-## 10. Protótipos
 
-Os protótipos das telas principais do projeto juntamente com o código fonte estão definidos abaixo:
- 
- 
-## 11. Cronograma
+## 10. Cronograma
 
 ![Cronograma](https://github.com/guilhermearantes/WeRepCake/blob/master/imagens/cronograma_werep.jpg)
 ![Grant Chart](https://github.com/guilhermearantes/WeRepCake/blob/master/imagens/gant_werep.jpg)
 
-## 13. Referências
+## 11. Referências
 
 CookBook - PHP
 Devmedia
